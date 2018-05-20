@@ -1,5 +1,8 @@
 #ifndef __SIMPLE_LOGGER__
 #define __SIMPLE_LOGGER__
+#ifdef __cplusplus
+extern "C" {
+#endif
 /**
  * simple_logger
  * @license The MIT License (MIT)
@@ -44,3 +47,6 @@ void _slog(char *f,int l,char *msg,...);
 
 #endif
 
+#ifdef __cplusplus
+}
+#endif
