@@ -13,7 +13,7 @@ A simple, lightweight log-to-file option for C and C++ projects.
 init_logger("YOUR LOG FILE GOES HERE");
 ```
     
-2) frequently call
+2) frequently call and before program exit
 ```c
 slog_sync();
 ```
