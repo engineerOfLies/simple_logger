@@ -26,10 +26,11 @@ extern "C" {
 
 /**
   @brief initializes the simple logger.  Will automatically cleanup at program exit.
-
   @param log_file_path the file to log to
+  @param append_mode if true, the log file will be appended to, instead of overwritten.
+  @note append mode has the capacity to make MASSIVE log files if you are not careful
 */
-void init_logger(const char *log_file_path);
+void init_logger(const char *log_file_path,int append_mode);
 
 /**
  * @brief commits logs to file

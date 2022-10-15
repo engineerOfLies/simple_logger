@@ -15,15 +15,22 @@ void close_logger()
     }
 }
 
-void init_logger(const char *log_file_path)
+void init_logger(const char *log_file_path,int append_mode)
 {
+    int mode = 0;
+    const char *modes[] = 
+    {
+        "w",
+        "a"
+    };
+    if (append_mode)mode = 1;
     if (log_file_path == NULL)
     {
-        __log_file = fopen("output.log","a");
+        __log_file = fopen("simple.log",modes[mode]);
     }
     else
     {
-        __log_file = fopen(log_file_path,"a");
+        __log_file = fopen(log_file_path,modes[mode]);
     }
     atexit(close_logger);
 }
