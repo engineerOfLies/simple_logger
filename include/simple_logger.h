@@ -43,7 +43,7 @@ void slog_sync();
   @param ... variables to be put into the tokens.
 */
 #define slog(...) _slog(__FILE__,__LINE__,__VA_ARGS__)
-void _slog(char *f,int l,char *msg,...);
+void _slog(const char *f,int l,const char *msg,...);
 
 
 #endif

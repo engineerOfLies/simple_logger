@@ -35,7 +35,7 @@ void init_logger(const char *log_file_path,int append_mode)
     atexit(close_logger);
 }
 
-void _slog(char *f,int l,char *msg,...)
+void _slog(const char *f,int l,const char *msg,...)
 {
     va_list ap;
     dirty = 1;
