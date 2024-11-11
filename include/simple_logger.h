@@ -46,8 +46,9 @@ void slog_sync();
 void _slog(const char *f,int l,const char *msg,...);
 
 
-#endif
-
 #ifdef __cplusplus
 }
 #endif
+
+#endif
+
